@@ -16,3 +16,9 @@ const pageItemList = () => {
         pageItemList.appendChild(li);
     })
 }
+
+
+let myName = 'Kolade';
+let sureName = 'Adelaiye';
+
+myName.length !== sureName.length ? console.log('washeyray!!!') : console.log('O por ju ju ju!!!');
