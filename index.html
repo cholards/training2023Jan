@@ -10,7 +10,7 @@
 <body>
     <h1>Content goes here.</h1>
 
-    <button onclick="myFirstButton()" id="myFirstButton"> Click me</button>
+    <button onclick="myFirstButton()" id="myFirstButton"> Mosun</button>
 
     <button onclick="pageItemList()">Get list</button>
 
@@ -34,6 +34,25 @@
             //  -3 is a negative number
         </script>
 
+
+        <script>
+            let ladeleFamily = ['ranti', 'layi', 'kemi', 'muyiwa', 'funmi', 'mosun', 'bisi']
+            let adelaiyeFamily = ['iyabo', 'tunne', 'abey', 'nike', 'yemi', 'kola'];
+            let olowofelaFamily = ['iyabo', 'gbenga', 'bosun', 'rolake', 'kunbi']
+
+            function displayFamilyName(family, position) {
+                let result = family[position];
+                if (result == 'mosun') {
+                    console.log('Superstar')
+                } else {
+                    console.log(result);
+                }
+
+            }
+
+            displayFamilyName(ladeleFamily, 5)
+        </script>
+        <h2>End of page</h2>
     </p>
 </body>
 
