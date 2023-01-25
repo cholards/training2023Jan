@@ -28,4 +28,12 @@ let num = 3
 if (num > 0) {
     console.log(`${num} is a positive number`)
 }
-//  3 is a positive number
+
+
+
+isRaining = false
+if (isRaining) {
+    console.log('You need a rain coat.')
+} else {
+    console.log('No need for a rain coat.')
+}
