@@ -22,3 +22,10 @@ let myName = 'Kolade';
 let sureName = 'Adelaiye';
 
 myName.length !== sureName.length ? console.log('washeyray!!!') : console.log('O por ju ju ju!!!');
+
+
+let num = 3
+if (num > 0) {
+    console.log(`${num} is a positive number`)
+}
+//  3 is a positive number
