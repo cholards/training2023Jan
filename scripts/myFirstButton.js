@@ -18,22 +18,45 @@ const pageItemList = () => {
 }
 
 
-let myName = 'Kolade';
-let sureName = 'Adelaiye';
+let adelaiyeFamily = ['iyabo', 'tunne', 'abey', 'nike', 'yemi', 'kola'];
+// let userInput = prompt('Pls enter member name')
 
-myName.length !== sureName.length ? console.log('washeyray!!!') : console.log('O por ju ju ju!!!');
+// switch (userInput) {
+//     case 'kola':
+//         console.log(userInput + "'s position is " + (adelaiyeFamily.indexOf(userInput) + 1));
+//         break;
+//     case 'yemi':
+//         console.log(userInput + "'s position is " + (adelaiyeFamily.indexOf(userInput) + 1));
+//         break;
+//     case 'nike':
+//         console.log(userInput + "'s position is " + (adelaiyeFamily.indexOf(userInput) + 1));
+//         break;
+//     case 'abey':
+//         console.log(userInput + "'s position is " + (adelaiyeFamily.indexOf(userInput) + 1));
+//         break;
+//     case 'tunne':
+//         console.log(userInput + "'s position is " + (adelaiyeFamily.indexOf(userInput) + 1));
+//         break;
+//     case 'yabo':
+//         console.log(userInput + "'s position is " + (adelaiyeFamily.indexOf(userInput) + 1));
+//         break;
+//     case null:
+//         console.log("No data entered");
+//         break;
+//     case '':
+//         console.log("No data entered");
+//         break;
+//     default:
+//         console.log(userInput + "'s name is not in the family register")
+// }
 
 
-let num = 3
-if (num > 0) {
-    console.log(`${num} is a positive number`)
+
+const eightEmptyValues = Array(8)
+console.log(eightEmptyValues);
+
+
+for (let i = 0; i < eightEmptyValues.length; i++) {
+    eightEmptyValues[i] = i;
 }
-
-
-
-isRaining = false
-if (isRaining) {
-    console.log('You need a rain coat.')
-} else {
-    console.log('No need for a rain coat.')
-}
+console.log(eightEmptyValues);
