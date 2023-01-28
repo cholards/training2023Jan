@@ -17,7 +17,7 @@ const pageItemList = () => {
     })
 }
 
-
+// LESSON Switch, case, break 
 let adelaiyeFamily = ['iyabo', 'tunne', 'abey', 'nike', 'yemi', 'kola'];
 // let userInput = prompt('Pls enter member name')
 
@@ -51,12 +51,42 @@ let adelaiyeFamily = ['iyabo', 'tunne', 'abey', 'nike', 'yemi', 'kola'];
 // }
 
 
+// // LESSON Arrays
+// const eightEmptyValues = Array(8)
+// console.log(eightEmptyValues);
+// for (let i = 0; i < eightEmptyValues.length; i++) {
+//     eightEmptyValues[i] = i;
+// }
+// console.log(eightEmptyValues);
 
-const eightEmptyValues = Array(8)
-console.log(eightEmptyValues);
 
 
-for (let i = 0; i < eightEmptyValues.length; i++) {
-    eightEmptyValues[i] = i;
-}
-console.log(eightEmptyValues);
+// const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24, 999]
+//     //console.log(ages.sort());
+
+// if (ages.length % 2 === 0) {
+//     let halfLength = (ages.length / 2) - 1;
+//     let firstValue = ages[halfLength];
+//     let secondValue = ages[halfLength + 1];
+//     let medianVal = (firstValue + secondValue) / 2
+//     console.log(medianVal);
+// } else if (ages.length % 2 > 0) {
+//     let halfLength = (ages.length / 2) + 0.5;
+//     let halfPoint = ages[halfLength] - 1;
+//     let medianVal = (halfPoint) / 2
+//     console.log(medianVal);
+// } else {
+//     console.log('CANNOT COMPUTE')
+// }
+
+
+
+let alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+let AlphaRandom1 = Math.floor(Math.random() * 25);
+let AlphaRandom2 = Math.floor(Math.random() * 25);
+let AlphaRandom3 = Math.floor(Math.random() * 25);
+let AlphaRandom4 = Math.floor(Math.random() * 25);
+let numRandom1 = Math.floor(Math.random() * 77)
+let numRandom2 = Math.floor(Math.random() * 90)
+let numRandom3 = Math.floor(Math.random() * 99)
+console.log(alphabets[AlphaRandom1] + '' + numRandom1 + '' + alphabets[AlphaRandom2] + '' + numRandom2 + '' + alphabets[AlphaRandom3] + '' + numRandom3);
