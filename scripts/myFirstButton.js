@@ -5,6 +5,7 @@ const myFirstButton = () => {
     let randomButtonContent = Math.floor(Math.random() * buttonContent.length);
     console.log(buttonContent[randomButtonContent]);
     document.getElementById('content').innerText = buttonContent[randomButtonContent];
+
 }
 
 const pageItemList = () => {
@@ -82,11 +83,67 @@ let adelaiyeFamily = ['iyabo', 'tunne', 'abey', 'nike', 'yemi', 'kola'];
 
 
 let alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-let AlphaRandom1 = Math.floor(Math.random() * 25);
-let AlphaRandom2 = Math.floor(Math.random() * 25);
-let AlphaRandom3 = Math.floor(Math.random() * 25);
-let AlphaRandom4 = Math.floor(Math.random() * 25);
-let numRandom1 = Math.floor(Math.random() * 77)
-let numRandom2 = Math.floor(Math.random() * 90)
-let numRandom3 = Math.floor(Math.random() * 99)
-console.log(alphabets[AlphaRandom1] + '' + numRandom1 + '' + alphabets[AlphaRandom2] + '' + numRandom2 + '' + alphabets[AlphaRandom3] + '' + numRandom3);
+// let AlphaRandom1 = Math.floor(Math.random() * 25);
+// let AlphaRandom2 = Math.floor(Math.random() * 25);
+// let AlphaRandom3 = Math.floor(Math.random() * 25);
+// let AlphaRandom4 = Math.floor(Math.random() * 25);
+// let numRandom1 = Math.floor(Math.random() * 77)
+// let numRandom2 = Math.floor(Math.random() * 90)
+// let numRandom3 = Math.floor(Math.random() * 99)
+// console.log(alphabets[AlphaRandom1] + '' + numRandom1 + '' + alphabets[AlphaRandom2] + '' + numRandom2 + '' + alphabets[AlphaRandom3] + '' + numRandom3);
+
+
+
+//let countries = ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"];
+// let numArray = [];
+// let countAssocArray = [];
+// for (let i = 0; i < countries.length; i++) {
+//     let ele1 = countries[i].toLocaleLowerCase();
+//     let ele2 = countries[i].slice(0, 3);
+//     let ele3 = countries[i].length;
+//     let x = [ele1 + ', ' + ele2 + ', ' + ele3];
+//     countAssocArray.push(x);
+// }
+// console.log(countAssocArray);
+
+
+// let mySum = (...x) => {
+//     for (let i = 0; i < x.length; i++) {
+//         console.log(x[i]);
+//     }
+// }
+// mySum(alphabets);
+
+
+// let squaredNum = (function(n) {
+//     return n * n
+// })(10)
+// console.log(squaredNum)
+
+// const square = n => n * n;
+// console.log(square(2));
+
+
+// //scope.js
+// let a = 'JavaScript' // is a global scope it will be found anywhere in this file
+// let b = 10 // is a global scope it will be found anywhere in this file
+//     // Function scope
+// function letsLearnScope() {
+//     // console.log(a, b) // JavaScript 10, accessible
+//     let value = false
+//         // block scope
+//     if (true) {
+//         // we can access from the function and outside the function but 
+//         // variables declared inside the if will not be accessed outside the if block
+//         let a = 'Python'
+//         let b = 20
+//         let c = 30
+//         let d = 40
+//         value = !value
+//             // console.log(a, b, c, value) // Python 20 30 true
+//     }
+//     // we can not access c because c's scope is only the if block
+//     // console.log(a, b, value) // JavaScript 10 true
+// }
+// letsLearnScope()
+//     // console.log(a, b) // JavaScript 10, accessible

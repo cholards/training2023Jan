@@ -1,0 +1,23 @@
+{
+    "name": "nneka",
+    "version": "1.0.0",
+    "description": "Training ",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cholards/training2023Jan.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/cholards/training2023Jan/issues"
+    },
+    "homepage": "https://github.com/cholards/training2023Jan#readme",
+    "devDependencies": {
+        "jest": "^29.4.1"
+    }
+}
