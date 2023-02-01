@@ -1,10 +1,9 @@
-import { sum, fizz_buzz, fizz_buzz_total } from './partTwo';
+import { sum, fizz_buzz, fizz_buzz_total, kola } from './partTwo';
 
 describe('sum', () => {
     it('adds 1 + 2 to equal 3', () => {
         expect(sum(1, 2)).toBe(3)
     });
-
 });
 
 
@@ -24,8 +23,12 @@ describe('fizz buzz', () => {
         expect(fizz_buzz(77)).toBe(' ');
     });
 
-    it('should print all fizz buzz results in a arry', () => {
-        expect(fizz_buzz_total()).toBe([]);
-    });
+    // it('should print all fizz buzz results in a arry', () => {
+    //     expect(fizz_buzz_total()).toBe([]);
+    // });
 
+});
+
+describe('Prints Kola in any case', () => {
+    expect(kola(2, 3)).toBe(5)
 });

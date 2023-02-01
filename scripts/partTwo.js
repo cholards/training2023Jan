@@ -24,3 +24,8 @@ export function fizz_buzz_total() {
     }
     return result;
 }
+
+
+export function kola(a, b) {
+    return a + b;
+}
