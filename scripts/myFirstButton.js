@@ -144,6 +144,15 @@ const users = {
     }
 }
 
+users.Kola = {
+    email: 'kola@kola.com',
+    skills: ['PR', 'Multimedi', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node', 'Music'],
+    age: 90,
+    isLoggedIn: true,
+    points: 9000
+};
+
+Object.assign(users)
 
 //console.log(users['Alex'])
 
@@ -162,3 +171,5 @@ for (let i = 0; i < namesArray.length; i++) {
         console.log(`${namesArray[i]} has the highest score`)
     }
 }
+
+console.log(users)
