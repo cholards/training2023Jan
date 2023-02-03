@@ -229,3 +229,6 @@ console.log(sum)
 let seeIfNumbers = numbers.every(number => typeof number === 'number');
 
 console.log(seeIfNumbers)
+
+let findFunction = adelaiyeFamily.find(member => member.length == 4);
+console.log(findFunction)
