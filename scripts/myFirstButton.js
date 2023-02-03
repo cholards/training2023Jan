@@ -211,19 +211,8 @@ const pageItemList = () => {
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
-const sumArray = arr => {
-        let sum = 0;
+let sayHi = () => console.log('hello');
 
-        arr.forEach(x => {
-            sum += x;
-        })
-
-
-        console.log(sum)
-        return sum;
-    }
-    //console.log(sumArray(numbers))
-
-let sayHi = () => console.log('Kola');
-
-setInterval(sayHi, 1000);
+let sum = 0;
+numbers.forEach(a => sum += a);
+console.log(sum)
