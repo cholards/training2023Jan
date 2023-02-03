@@ -212,8 +212,6 @@ let adelaiyeFamily = ['iyabo', 'tunne', 'abey', 'nike', 'yemi', 'kola'];
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 
-
-
 let modifier = adelaiyeFamily.map((m, i, a) => m + ' ' + i);
 
 console.log(modifier);
@@ -221,3 +219,13 @@ console.log(modifier);
 let myFilter = adelaiyeFamily.filter(name => !name.includes('i'));
 
 console.log(myFilter);
+
+
+// const numbers = [1, 2, 3, 4, 5]
+const sum = numbers.reduce((acc, cur) => acc + cur, 0)
+
+console.log(sum)
+
+let seeIfNumbers = numbers.every(number => typeof number === 'number');
+
+console.log(seeIfNumbers)
