@@ -25,7 +25,7 @@ const pageItemList = () => {
 
 
 // LESSON Switch, case, break 
-// let adelaiyeFamily = ['iyabo', 'tunne', 'abey', 'nike', 'yemi', 'kola'];
+let adelaiyeFamily = ['iyabo', 'tunne', 'abey', 'nike', 'yemi', 'kola'];
 // const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24, 999]
 // let alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
@@ -211,8 +211,13 @@ const pageItemList = () => {
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
-let sayHi = () => console.log('hello');
 
-let sum = 0;
-numbers.forEach(a => sum += a);
-console.log(sum)
+
+
+let modifier = adelaiyeFamily.map((m, i, a) => m + ' ' + i);
+
+console.log(modifier);
+
+let myFilter = adelaiyeFamily.filter(name => !name.includes('i'));
+
+console.log(myFilter);
