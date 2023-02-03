@@ -232,3 +232,13 @@ console.log(seeIfNumbers)
 
 let findFunction = adelaiyeFamily.find(member => member.length == 4);
 console.log(findFunction)
+
+
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const bools = [true, true, true, true]
+
+const areSomeTrue = bools.some((b) => b === true)
+
+console.log(areSomeTrue) //true
+const areAllStr = names.some((name) => typeof name === 'number')
+console.log(areAllStr) // false
