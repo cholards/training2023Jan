@@ -242,3 +242,6 @@ const areSomeTrue = bools.some((b) => b === true)
 console.log(areSomeTrue) //true
 const areAllStr = names.some((name) => typeof name === 'number')
 console.log(areAllStr) // false
+
+const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
+console.log(numbers.sort((a, b) => a - b))
