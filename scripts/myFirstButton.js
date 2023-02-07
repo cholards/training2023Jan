@@ -270,4 +270,8 @@ let gcioba = new Map(gciRollCall);
 
 gcioba.set('Adewole', 'Raji');
 
-console.log(gcioba);
+for (const [eni, eji] of gcioba) {
+
+    console.log(`${eni} is the one with ${eji}`)
+
+}
