@@ -244,7 +244,7 @@ const areAllStr = names.some((name) => typeof name === 'number')
 console.log(areAllStr) // false
 
 const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
-console.log(numbers.sort((a, b) => a - b))
+    // console.log(numbers.sort((a, b) => a - b))
 
 
 
@@ -253,7 +253,21 @@ let b = [2, 4, 6, 8, 10];
 let c = [...a, ...b];
 
 let A = new Set(a);
-let B = new Set(b)
-let C = new Set(c)
+let B = new Set(b);
+let C = a.filter(x => !B.has(x))
 
-console.log(C);
+// console.log(C);
+
+
+let gciRollCall = [
+    ['Kolade', 'Adelaiye'],
+    ['Idris', 'Busari'],
+    ['Abayomi', 'Ajayi'],
+    ['Biola', 'Yusuf']
+]
+
+let gcioba = new Map(gciRollCall);
+
+gcioba.set('Adewole', 'Raji');
+
+console.log(gcioba);
