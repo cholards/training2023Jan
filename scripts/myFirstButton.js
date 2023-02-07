@@ -245,3 +245,15 @@ console.log(areAllStr) // false
 
 const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
 console.log(numbers.sort((a, b) => a - b))
+
+
+
+let a = [1, 2, 3, 4, 5];
+let b = [2, 4, 6, 8, 10];
+let c = [...a, ...b];
+
+let A = new Set(a);
+let B = new Set(b)
+let C = new Set(c)
+
+console.log(C);
