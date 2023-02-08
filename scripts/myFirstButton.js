@@ -285,6 +285,24 @@ for (let nomu in numbers) {
 
 console.log([...numbers])
 
-let [eni, egi, eta, erin, arun, afe] = adelaiyeFamily;
+//let [eni, egi, eta, erin, arun, afe] = adelaiyeFamily;
 
-console.log(eni, egi, eta, erin, arun, afe)
+
+
+
+const names2 = [undefined, 'Brook', 'David']
+let [
+    firstPerson = 'Asabeneh',
+    secondPerson,
+    thirdPerson,
+    fourthPerson = 'John'
+] = names2
+
+console.log(firstPerson, secondPerson, thirdPerson, fourthPerson)
+
+
+let [eni, egi, eta, ...greatnessIncrease] = adelaiyeFamily
+
+console.log(eni, egi, eta)
+let soroSoke = [egi, ...greatnessIncrease]
+console.log(soroSoke);
