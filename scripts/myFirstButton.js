@@ -209,100 +209,151 @@ let adelaiyeFamily = ['iyabo', 'tunne', 'abey', 'nike', 'yemi', 'kola'];
 // console.log(higherOrder(2)(3)(10))
 
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+//const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 
-let modifier = adelaiyeFamily.map((m, i, a) => m + ' ' + i);
+// let modifier = adelaiyeFamily.map((m, i, a) => m + ' ' + i);
 
-console.log(modifier);
+// console.log(modifier);
 
-let myFilter = adelaiyeFamily.filter(name => !name.includes('i'));
+// let myFilter = adelaiyeFamily.filter(name => !name.includes('i'));
 
-console.log(myFilter);
-
-
-// const numbers = [1, 2, 3, 4, 5]
-const sum = numbers.reduce((acc, cur) => acc + cur, 0)
-
-console.log(sum)
-
-let seeIfNumbers = numbers.every(number => typeof number === 'number');
-
-console.log(seeIfNumbers)
-
-let findFunction = adelaiyeFamily.find(member => member.length == 4);
-console.log(findFunction)
+// console.log(myFilter);
 
 
-const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
-const bools = [true, true, true, true]
+// // const numbers = [1, 2, 3, 4, 5]
+// const sum = numbers.reduce((acc, cur) => acc + cur, 0)
 
-const areSomeTrue = bools.some((b) => b === true)
+// console.log(sum)
 
-console.log(areSomeTrue) //true
-const areAllStr = names.some((name) => typeof name === 'number')
-console.log(areAllStr) // false
+// let seeIfNumbers = numbers.every(number => typeof number === 'number');
 
-const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
-    // console.log(numbers.sort((a, b) => a - b))
+// console.log(seeIfNumbers)
 
-
-
-let a = [1, 2, 3, 4, 5];
-let b = [2, 4, 6, 8, 10];
-let c = [...a, ...b];
-
-let A = new Set(a);
-let B = new Set(b);
-let C = a.filter(x => !B.has(x))
-
-// console.log(C);
+// let findFunction = adelaiyeFamily.find(member => member.length == 4);
+// console.log(findFunction)
 
 
-let gciRollCall = [
-    ['Kolade', 'Adelaiye'],
-    ['Idris', 'Busari'],
-    ['Abayomi', 'Ajayi'],
-    ['Biola', 'Yusuf']
-]
+// const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+// const bools = [true, true, true, true]
 
-let gcioba = new Map(gciRollCall);
+// const areSomeTrue = bools.some((b) => b === true)
 
-gcioba.set('Adewole', 'Raji');
+// console.log(areSomeTrue) //true
+// const areAllStr = names.some((name) => typeof name === 'number')
+// console.log(areAllStr) // false
 
-for (const [eni, eji] of gcioba) {
+// const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
+//     // console.log(numbers.sort((a, b) => a - b))
 
-    console.log(`${eni} is the one with ${eji}`)
 
+
+// let a = [1, 2, 3, 4, 5];
+// let b = [2, 4, 6, 8, 10];
+// let c = [...a, ...b];
+
+// let A = new Set(a);
+// let B = new Set(b);
+// let C = a.filter(x => !B.has(x))
+
+// // console.log(C);
+
+
+// let gciRollCall = [
+//     ['Kolade', 'Adelaiye'],
+//     ['Idris', 'Busari'],
+//     ['Abayomi', 'Ajayi'],
+//     ['Biola', 'Yusuf']
+// ]
+
+// let gcioba = new Map(gciRollCall);
+
+// gcioba.set('Adewole', 'Raji');
+
+// for (const [eni, eji] of gcioba) {
+
+//     console.log(`${eni} is the one with ${eji}`)
+
+// }
+
+// let numuArr = []
+
+// for (let nomu in numbers) {
+//     numuArr.push('Position' + nomu)
+
+// }
+
+// console.log([...numbers])
+
+// //let [eni, egi, eta, erin, arun, afe] = adelaiyeFamily;
+
+
+
+
+// const names2 = [undefined, 'Brook', 'David']
+// let [
+//     firstPerson = 'Asabeneh',
+//     secondPerson,
+//     thirdPerson,
+//     fourthPerson = 'John'
+// ] = names2
+
+// console.log(firstPerson, secondPerson, thirdPerson, fourthPerson)
+
+
+// let [eni, egi, eta, ...greatnessIncrease] = adelaiyeFamily
+
+// console.log(eni, egi, eta)
+// let soroSoke = [egi, ...greatnessIncrease]
+// console.log(soroSoke);
+
+// const rectangle = {
+//     width: 20,
+//     height: 10,
+//     area: 200,
+//     perimeter: undefined
+// }
+// let { width, height, area, perimeter = 60 } = rectangle
+
+// console.log(width, height, area, perimeter) //20 10 200 60
+//     //Let us modify the object:width to 30 and perimeter to 80
+
+
+
+const person = {
+        firstName: 'Asabeneh',
+        lastName: 'Yetayeh',
+        age: 250,
+        country: 'Finland',
+        job: 'Instructor and Developer',
+        skills: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Redux',
+            'Node',
+            'MongoDB',
+            'Python',
+            'D3.js'
+        ],
+        languages: ['Amharic', 'English', 'Suomi(Finnish)']
+    }
+    // Let us create a function which give information about the person object without destructuring
+
+const getPersonInfo = obj => {
+    const skills = obj.skills
+    const formattedSkills = skills.slice(0, -1).join(', ')
+    const languages = obj.languages
+    const formattedLanguages = languages.slice(0, -1).join(', ')
+
+    let personInfo = `${obj.firstName} ${obj.lastName} lives in ${obj.country}. He is  ${
+      obj.age
+    } years old. He is an ${obj.job}. He teaches ${formattedSkills} and ${
+      skills[skills.length - 1]
+    }. He speaks ${formattedLanguages} and a little bit of ${languages[2]}.`
+
+    return personInfo
 }
 
-let numuArr = []
-
-for (let nomu in numbers) {
-    numuArr.push('Position' + nomu)
-
-}
-
-console.log([...numbers])
-
-//let [eni, egi, eta, erin, arun, afe] = adelaiyeFamily;
-
-
-
-
-const names2 = [undefined, 'Brook', 'David']
-let [
-    firstPerson = 'Asabeneh',
-    secondPerson,
-    thirdPerson,
-    fourthPerson = 'John'
-] = names2
-
-console.log(firstPerson, secondPerson, thirdPerson, fourthPerson)
-
-
-let [eni, egi, eta, ...greatnessIncrease] = adelaiyeFamily
-
-console.log(eni, egi, eta)
-let soroSoke = [egi, ...greatnessIncrease]
-console.log(soroSoke);
+console.log(getPersonInfo(person))
