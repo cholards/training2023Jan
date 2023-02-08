@@ -275,3 +275,16 @@ for (const [eni, eji] of gcioba) {
     console.log(`${eni} is the one with ${eji}`)
 
 }
+
+let numuArr = []
+
+for (let nomu in numbers) {
+    numuArr.push('Position' + nomu)
+
+}
+
+console.log([...numbers])
+
+let [eni, egi, eta, erin, arun, afe] = adelaiyeFamily;
+
+console.log(eni, egi, eta, erin, arun, afe)
