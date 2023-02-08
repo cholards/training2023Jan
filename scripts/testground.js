@@ -4,16 +4,21 @@ export function kold(n) {
 
 
         if (i % 15 === 0) {
-            console.log('fizzbuzz')
+            // console.log('fizzbuzz')
+            return 'fizzbuzz'
         } else if (i % 3 === 0) {
-            console.log('fizz')
-
+            // console.log('fizz')
+            return 'fizz';
         } else if (i % 2 === 0) {
-            console.log('buzz')
-        } else { console.log(i) }
+            // console.log('buzz')
+            return 'buzz'
+        } else {
+            //  console.log(i)
+            return i
+        }
 
     }
 
 }
 
-console.log(kold(30));
+kold(37);
