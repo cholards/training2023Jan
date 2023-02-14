@@ -57,3 +57,8 @@ let X = "a"
 let Y = "x"
 
 console.log(replaceChar(word, X, Y))
+
+const str = 'I love JavaScript'
+const pattern = /love/g
+const result = str.match(pattern)
+console.log(result)
