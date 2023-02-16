@@ -56,6 +56,12 @@ export function myFirstRecursive(num) {
 };
 
 
-export function fibonacciSequence() {
+export function fibonacciSequence(number) {
+    if (number === 1 || number === 0) { return 1 };
 
+    let current = fibonacciSequence(number - 1) + fibonacciSequence(number - 2)
+
+    return current
 }
+
+console.log(fibonacciSequence(5))
