@@ -66,14 +66,33 @@
 
 // console.log(fibonacciSequence(5))
 
-class Person {
-    constructor(firstName, lastName, age = 25, ) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.displayName = this.firstName + ' ' + this.lastName;
-    }
-};
-let kola = new Person('Kolade', 'Adelaiye', 12);
+let fMemNames = 'Adelaiye';
 
-console.log(kola.age);
+
+class Car {
+    constructor(
+        make = 'BMW',
+        model = '3 Series',
+        color = 'Red',
+        prodYear = 2023
+    ) {
+        this.make = make;
+        this.model = model;
+        this.color = color;
+        this.prodYear = prodYear;
+    }
+    fam = fMemNames;
+
+    getSumm() {
+        return `This ${this.fam}s' ${this.color} ${this.prodYear} ${this.make} ${this.model} is simply fantastic`
+    }
+}
+
+
+let myCar = new Car('Toyota', 'Auris', 'White')
+let mosunsCar = new Car('Landrover', 'Discovery', 'White', 2024)
+let modesirsCar = new Car()
+
+console.log(myCar.getSumm())
+console.log(mosunsCar.getSumm())
+console.log(modesirsCar.getSumm())
