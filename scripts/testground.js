@@ -42,26 +42,38 @@
 // Output: abacd
 
 
-console.log(myFirstRecursive(5))
+// console.log(myFirstRecursive(5))
 
-export function myFirstRecursive(num) {
+// export function myFirstRecursive(num) {
 
-    if (num < 0) { return; }
+//     if (num < 0) { return; }
 
-    if (num === 0 || num === 1) {
-        return 1;
-    } else {
-        return num * myFirstRecursive(num - 1);
+//     if (num === 0 || num === 1) {
+//         return 1;
+//     } else {
+//         return num * myFirstRecursive(num - 1);
+//     }
+// };
+
+
+// export function fibonacciSequence(number) {
+//     if (number === 1 || number === 0) { return 1 };
+
+//     let current = fibonacciSequence(number - 1) + fibonacciSequence(number - 2)
+
+//     return current
+// }
+
+// console.log(fibonacciSequence(5))
+
+class Person {
+    constructor(firstName, lastName, age = 25, ) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.displayName = this.firstName + ' ' + this.lastName;
     }
 };
+let kola = new Person('Kolade', 'Adelaiye', 12);
 
-
-export function fibonacciSequence(number) {
-    if (number === 1 || number === 0) { return 1 };
-
-    let current = fibonacciSequence(number - 1) + fibonacciSequence(number - 2)
-
-    return current
-}
-
-console.log(fibonacciSequence(5))
+console.log(kola.age);
