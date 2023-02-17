@@ -74,18 +74,29 @@ class Car {
         make = 'BMW',
         model = '3 Series',
         color = 'Red',
-        prodYear = 2023
+        prodYear = 2023,
+
     ) {
         this.make = make;
         this.model = model;
         this.color = color;
         this.prodYear = prodYear;
+        this.features = []
     }
     fam = fMemNames;
-
-    getSumm() {
-        return `This ${this.fam}s' ${this.color} ${this.prodYear} ${this.make} ${this.model} is simply fantastic`
+    get Summ() {
+        return `This ${this.fam}s' ${this.color} ${this.prodYear} ${this.make} ${this.model} is simply fantastic because it has the following features: ${this.features.join(', ')} `
     }
+
+    set nuProdYear(prod) {
+        this.prodYear = prod;
+    }
+
+    set Carfeatures(feature) {
+        this.features.push(feature);
+
+    }
+
 }
 
 
@@ -93,6 +104,13 @@ let myCar = new Car('Toyota', 'Auris', 'White')
 let mosunsCar = new Car('Landrover', 'Discovery', 'White', 2024)
 let modesirsCar = new Car()
 
-console.log(myCar.getSumm())
-console.log(mosunsCar.getSumm())
-console.log(modesirsCar.getSumm())
+mosunsCar.nuProdYear = 2020;
+mosunsCar.Carfeatures = 'four tyres';
+mosunsCar.Carfeatures = 'steering';
+mosunsCar.Carfeatures = 'windscreen';
+
+
+
+console.log(myCar.Summ)
+console.log(mosunsCar.Summ)
+console.log(modesirsCar.Summ)
