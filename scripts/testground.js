@@ -197,3 +197,9 @@ function kola(x, y) {
 }
 
 console.log(kola(30, 200)) //
+
+
+mosunsCar.nuProdYear = 2020;
+mosunsCar.Carfeatures = 'four tyres';
+mosunsCar.Carfeatures = 'steering';
+mosunsCar.Carfeatures = 'windscreen';
