@@ -66,116 +66,134 @@
 
 // console.log(fibonacciSequence(5))
 
-let fMemNames = 'Adelaiye';
+// let fMemNames = 'Adelaiye';
 
 
-class Car {
-    constructor(
-        make = 'BMW',
-        model = '3 Series',
-        color = 'Red',
-        prodYear = 2023,
+// class Car {
+//     constructor(
+//         make = 'BMW',
+//         model = '3 Series',
+//         color = 'Red',
+//         prodYear = 2023,
 
-    ) {
-        this.make = make;
-        this.model = model;
-        this.color = color;
-        this.prodYear = prodYear;
-        this.features = []
-    }
-    fam = fMemNames;
-    get Summ() {
-        return `This ${this.fam}s' ${this.color} ${this.prodYear} ${this.make} ${this.model} is simply fantastic because it has the following features: ${this.features.join(', ')} `
-    }
+//     ) {
+//         this.make = make;
+//         this.model = model;
+//         this.color = color;
+//         this.prodYear = prodYear;
+//         this.features = []
+//     }
+//     fam = fMemNames;
+//     get Summ() {
+//         return `This ${this.fam}s' ${this.color} ${this.prodYear} ${this.make} ${this.model} is simply fantastic because it has the following features: ${this.features.join(', ')} `
+//     }
 
-    set nuProdYear(prod) {
-        this.prodYear = prod;
-    }
+//     set nuProdYear(prod) {
+//         this.prodYear = prod;
+//     }
 
-    set Carfeatures(feature) {
-        this.features.push(feature);
+//     set Carfeatures(feature) {
+//         this.features.push(feature);
 
-    }
+//     }
 
+// }
+
+
+// let myCar = new Car('Toyota', 'Auris', 'White')
+// let mosunsCar = new Car('Landrover', 'Discovery', 'White', 2024)
+// let modesirsCar = new Car()
+
+// mosunsCar.nuProdYear = 2020;
+// mosunsCar.Carfeatures = 'four tyres';
+// mosunsCar.Carfeatures = 'steering';
+// mosunsCar.Carfeatures = 'windscreen';
+
+
+
+// console.log(myCar.Summ)
+// console.log(mosunsCar.Summ)
+// console.log(modesirsCar.Summ)
+
+
+
+// class Person {
+//     constructor(firstName, lastName, age, country, city) {
+//         this.firstName = firstName
+//         this.lastName = lastName
+//         this.age = age
+//         this.country = country
+//         this.city = city
+//         this.score = 0
+//         this.skills = []
+//     }
+//     getFullName() {
+//         const fullName = this.firstName + ' ' + this.lastName
+//         return fullName
+//     }
+//     get getScore() {
+//         return this.score
+//     }
+//     get getSkills() {
+//         return this.skills
+//     }
+//     set setScore(score) {
+//         this.score += score
+//     }
+//     set setSkill(skill) {
+//         this.skills.push(skill)
+//     }
+//     getPersonInfo() {
+//         let fullName = this.getFullName()
+//         let skills =
+//             this.skills.length > 0 &&
+//             this.skills.slice(0, this.skills.length - 1).join(', ') +
+//             ` and ${this.skills[this.skills.length - 1]}`
+//         let formattedSkills = skills ? `He knows ${skills}` : ''
+
+//         let info = `${fullName} is ${this.age}. He lives ${this.city}, ${this.country}. ${formattedSkills}`
+//         return info
+//     }
+// }
+// const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+// const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+// const person3 = new Person('John', 'Doe', 50, 'Mars', 'Mars city')
+
+// person1.setScore = 1
+// person1.setSkill = 'HTML'
+// person1.setSkill = 'CSS'
+// person1.setSkill = 'JavaScript'
+
+// person2.setScore = 1
+// person2.setSkill = 'Planning'
+// person2.setSkill = 'Managing'
+// person2.setSkill = 'Organizing'
+
+// console.log(person1.getScore)
+// console.log(person2.getScore)
+
+// console.log(person1.getSkills)
+// console.log(person2.getSkills)
+// console.log(person3.getSkills)
+
+// console.log(person1.getPersonInfo())
+// console.log(person2.getPersonInfo())
+// console.log(person3.getPersonInfo())
+
+//console.log(localStorage.currentUser)
+
+
+// let nuArr = ['kolade', 'mosunmola', 'modesire', 'momore', 'moje']
+// let nuArrStr = JSON.stringify(nuArr, undefined, 2);
+
+
+// //localStorage.setItem('famiily', nuArrStr);
+
+// console.log(localStorage.getItem('famiily'))
+
+
+function kola(x, y) {
+    return (x / 100) * y
 }
 
-
-let myCar = new Car('Toyota', 'Auris', 'White')
-let mosunsCar = new Car('Landrover', 'Discovery', 'White', 2024)
-let modesirsCar = new Car()
-
-mosunsCar.nuProdYear = 2020;
-mosunsCar.Carfeatures = 'four tyres';
-mosunsCar.Carfeatures = 'steering';
-mosunsCar.Carfeatures = 'windscreen';
-
-
-
-console.log(myCar.Summ)
-console.log(mosunsCar.Summ)
-console.log(modesirsCar.Summ)
-
-
-
-class Person {
-    constructor(firstName, lastName, age, country, city) {
-        this.firstName = firstName
-        this.lastName = lastName
-        this.age = age
-        this.country = country
-        this.city = city
-        this.score = 0
-        this.skills = []
-    }
-    getFullName() {
-        const fullName = this.firstName + ' ' + this.lastName
-        return fullName
-    }
-    get getScore() {
-        return this.score
-    }
-    get getSkills() {
-        return this.skills
-    }
-    set setScore(score) {
-        this.score += score
-    }
-    set setSkill(skill) {
-        this.skills.push(skill)
-    }
-    getPersonInfo() {
-        let fullName = this.getFullName()
-        let skills =
-            this.skills.length > 0 &&
-            this.skills.slice(0, this.skills.length - 1).join(', ') +
-            ` and ${this.skills[this.skills.length - 1]}`
-        let formattedSkills = skills ? `He knows ${skills}` : ''
-
-        let info = `${fullName} is ${this.age}. He lives ${this.city}, ${this.country}. ${formattedSkills}`
-        return info
-    }
-}
-const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
-const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
-const person3 = new Person('John', 'Doe', 50, 'Mars', 'Mars city')
-
-person1.setScore = 1
-person1.setSkill = 'HTML'
-person1.setSkill = 'CSS'
-person1.setSkill = 'JavaScript'
-
-person2.setScore = 1
-person2.setSkill = 'Planning'
-person2.setSkill = 'Managing'
-person2.setSkill = 'Organizing'
-
-console.log(person1.getScore)
-console.log(person2.getScore)
-
-console.log(person1.getSkills)
-console.log(person2.getSkills)
-console.log(person3.getSkills)
-
-console.log(person1.getPersonInfo())
-console.log(person2.getPersonInfo())
-console.log(person3.getPersonInfo())
+console.log(kola(30, 200)) //
