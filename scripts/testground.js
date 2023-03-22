@@ -192,14 +192,71 @@
 // console.log(localStorage.getItem('famiily'))
 
 
-function kola(x, y) {
-    return (x / 100) * y
+//Callback
+const doSomething = mosun => {
+    setTimeout(() => {
+        const skills = ['HTML', 'CSS', 'JS']
+        mosun('It did not go well', skills)
+    }, 2000)
 }
 
-console.log(kola(30, 200)) //
+const callback = (err, result) => {
+    if (err) {
+        return console.log(err)
+    }
+    return console.log(result)
+}
+
+// doSomething(callback)
 
 
-mosunsCar.nuProdYear = 2020;
-mosunsCar.Carfeatures = 'four tyres';
-mosunsCar.Carfeatures = 'steering';
-mosunsCar.Carfeatures = 'windscreen';
+
+let myCall = kolee => {
+    setTimeout(() => {
+        let pramOne = "Kare lai!"
+        setTimeout(() => {
+            kolee(pramOne, "eji")
+        }, 2000);
+    }, 3000)
+};
+
+let myProm = (result, err) => {
+    if (result) {
+        return console.log(result)
+    } else {
+        console.log(`There wan an error ${err}`)
+    }
+};
+
+
+myCall(myProm)
+    //myProm(myCall)
+
+
+
+let modesire = async(grace) => {
+    setInterval(grace => {
+        console.log(Math.round(Math.random(5) * 99))
+    }, 2000)
+
+}
+let momore = await (modesire())
+
+
+
+
+
+
+// const url = 'https://restcountries.com/v2/all' // countries api
+// fetch(url)
+//     .then(response => response.json()) // accessing the API data as JSON
+//     .then(data => {
+//         // getting the data
+//         for (const key in data) {
+//             document.write(`${key}. <strong> ${data[key].name} </strong> - ${data[key].region} - ${data[key].population
+//             }<br>`)
+//         }
+//         console.log(data)
+
+//     })
+//     .catch(error => console.error(error)) // handling error if something wrong happens
