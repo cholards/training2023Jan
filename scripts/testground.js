@@ -192,55 +192,55 @@
 // console.log(localStorage.getItem('famiily'))
 
 
-//Callback
-const doSomething = mosun => {
-    setTimeout(() => {
-        const skills = ['HTML', 'CSS', 'JS']
-        mosun('It did not go well', skills)
-    }, 2000)
-}
+// //Callback
+// const doSomething = mosun => {
+//     setTimeout(() => {
+//         const skills = ['HTML', 'CSS', 'JS']
+//         mosun('It did not go well', skills)
+//     }, 2000)
+// }
 
-const callback = (err, result) => {
-    if (err) {
-        return console.log(err)
-    }
-    return console.log(result)
-}
+// const callback = (err, result) => {
+//     if (err) {
+//         return console.log(err)
+//     }
+//     return console.log(result)
+// }
 
-// doSomething(callback)
-
-
-
-let myCall = kolee => {
-    setTimeout(() => {
-        let pramOne = "Kare lai!"
-        setTimeout(() => {
-            kolee(pramOne, "eji")
-        }, 2000);
-    }, 3000)
-};
-
-let myProm = (result, err) => {
-    if (result) {
-        return console.log(result)
-    } else {
-        console.log(`There wan an error ${err}`)
-    }
-};
-
-
-myCall(myProm)
-    //myProm(myCall)
+// // doSomething(callback)
 
 
 
-let modesire = async(grace) => {
-    setInterval(grace => {
-        console.log(Math.round(Math.random(5) * 99))
-    }, 2000)
+// let myCall = kolee => {
+//     setTimeout(() => {
+//         let pramOne = "Kare lai!"
+//         setTimeout(() => {
+//             kolee(pramOne, "eji")
+//         }, 2000);
+//     }, 3000)
+// };
 
-}
-let momore = await (modesire())
+// let myProm = (result, err) => {
+//     if (result) {
+//         return console.log(result)
+//     } else {
+//         console.log(`There wan an error ${err}`)
+//     }
+// };
+
+
+// myCall(myProm)
+//     //myProm(myCall)
+
+
+
+// let modesire = async(grace) => {
+//     setInterval(grace => {
+//         console.log(Math.round(Math.random(5) * 99))
+//     }, 2000)
+
+// }
+// let momore = await (modesire())
 
 
 
@@ -260,3 +260,63 @@ let momore = await (modesire())
 
 //     })
 //     .catch(error => console.error(error)) // handling error if something wrong happens
+
+
+// Closures
+
+// function outerFunction() {
+//     let count = 0
+
+//     function innerFunction() {
+//         count++
+//         return count
+//     }
+
+//     return innerFunction
+// }
+
+
+// let keepCount = outerFunction()
+
+// setInterval(() => {
+
+//     console.log(keepCount())
+// }, 1000)
+
+// a function which generate random hexa colors
+const hexaColor = () => {
+    const str = '0123456789abcdef'
+    let hexa = '#'
+    let index
+    for (let i = 0; i < 6; i++) {
+        index = Math.floor(Math.random() * str.length)
+        hexa += str[index]
+    }
+    return hexa
+}
+
+console.log(hexaColor())
+
+
+// a function which shows date and time
+const showDateTime = () => {
+    const now = new Date()
+    const year = now.getFullYear()
+    const month = now.getMonth() + 1
+    const date = now.getDate()
+    let hours = now.getHours()
+    let minutes = now.getMinutes()
+    if (hours < 10) {
+        hours = '0' + hours
+    }
+    if (minutes < 10) {
+        minutes = '0' + minutes
+    }
+
+    const dateMonthYear = date + '.' + month + '.' + year
+    const time = hours + ':' + minutes
+    const fullTime = dateMonthYear + ' ' + time
+    return fullTime
+}
+
+console.log(showDateTime())
