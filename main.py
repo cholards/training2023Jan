@@ -22,3 +22,5 @@ for keys, values in my_dic.items():
     print(f"{keys.upper()} : {values}")
     
 print(my_dic.items())
+
+
