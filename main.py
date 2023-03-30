@@ -6,24 +6,6 @@ interest_type = ((input('''\n Investment \n
                        
 Enter either 'investment' or 'bond' from the menu above to proceed: \n> ''').upper()))
 
-if interest_type == 'INVESTMENT' or interest_type == 'BOND':
-    principal = int(input("Amount \n> "))
-    rate = int(input("Percentage of Interest Rate(No need to add percentage sign (%)) \n> "))
-    time = int(input("How many years? \n> "))
-    interest = (input("Do you want Simple or compound interest? \n> ").lower())
-    
-    if interest == "simple":
-            result = principal(1 + (rate/100) * time)
-            print(result)
-    elif interest == "compound":
-        result = principal * math.pow((1 + (rate/100)),time)
-        print(result)
-    else:
-        print(input("Please interest input can only be 'Simple' or 'Compound'"))  
-else:
-    print(f'Error!!! "{interest_type.capitalize()}" is not a valid interest type')
-    
-     
     
 
 
