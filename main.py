@@ -1,63 +1,54 @@
-import math
+'''This is a program that allows the user to access two
+different financial calculators: an investment calculator and a home loan
+repayment calculator'''
 
+import math # import math module
+
+# Get input on interest type from user
 interest_type = ((input('''\n Investment \n 
 - to calculate the amount of interest you'll earn on your investment bond \n 
 - to calculate the amount you'll have to pay on a home loan \n \n 
-                       
-Enter either 'investment' or 'bond' from the menu above to proceed: \n> ''').upper()))
 
+Enter either 'investment' or 'bond' from the menu above to proceed: \n> ''').upper())) # Input casting to upper is done to ensure consistency of input
+
+
+# Condition if user inputs "Investment" or "Bond"
+if interest_type == 'INVESTMENT': # Action to calculate investment if condition is met
     
-
-
-# Type a long string and change every other charcter to capital
-
-alphabets = "abcdefghijklmnopqrstuvwxyz"
-
-# print(alphabets[0::2].upper())
-alphabets_lenth = len(alphabets)-1
-
-# for i in range(0, len(alphabets)):
-#     if i%2 == 0:
-#         print(alphabets[i])
-#     else:
-#        print(alphabets[i].upper())
-        
-# my_list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-# double_list = [item * 2 for item in my_list]
-# print(double_list)
-
-
-my_dic = {"name": "Kolade", "surname": "Adelaiye", "age":22, "gender": "male"}
-
-for keys, values in my_dic.items():
-    print(f"{keys.upper()} : {values}")
-    
-print(my_dic.items())
-
-import math
-
-interest_type = ((input('''\n Investment \n 
-- to calculate the amount of interest you'll earn on your investment bond \n 
-- to calculate the amount you'll have to pay on a home loan \n \n 
-                       
-Enter either 'investment' or 'bond' from the menu above to proceed: \n> ''').upper()))
-
-if interest_type == 'INVESTMENT' or interest_type == 'BOND':
+    # Take inputs to calculate investment
     principal = int(input("Amount \n> "))
     rate = int(input("Percentage of Interest Rate(No need to add percentage sign (%)) \n> "))
     time = int(input("How many years? \n> "))
-    interest = (input("Do you want Simple or compound interest? \n> ").lower())
+    interest = (input("Do you want Simple or Compound interest? \n> ").lower())
     
-    if interest == "simple":
-            result = principal(1 + (rate/100) * time)
+    
+    
+    # Nested conditional actions for simple and compound interest options
+    if interest == "simple": # Action to calculate simple interest if condition is met
+            result = principal * (1 + ((rate/100) * time))
             print(result)
-    elif interest == "compound":
+    elif interest == "compound": # Action to calculate compound interest if condition is met
         result = principal * math.pow((1 + (rate/100)),time)
-        print(result)
-    else:
-        print(input("Please interest input can only be 'Simple' or 'Compound'"))  
-else:
+        print(round(result, 2))
+    else: # Default action if user inputs neither 'Simple' or 'Compound'
+        print(input("Interest input can only be 'Simple' or 'Compound'"))
+        # End of nested conditional actions
+        
+        
+        
+elif interest_type == 'BOND': # Action to calculate bond if condition is met
+    
+    # Take inputs to calculate bond
+    current_house_vaulue = int(input("Current House Value \n> "))
+    interest_rate = int(input("Interest Rate(No need to add percentage sign (%)) \n> "))
+    repayment_months = int(input("How many months you plan to take to repay the bond. ? \n> ")) 
+    rate = (interest_rate/100)/12
+    bond = (rate * current_house_vaulue)/(1 - (1 + rate) **(-repayment_months))
+    print(round(bond,2))
+    
+    # Default action if user inputs neither 'Investment' or 'Bond'
+else: 
     print(f'Error!!! "{interest_type.capitalize()}" is not a valid interest type')
     
      
-
+    
