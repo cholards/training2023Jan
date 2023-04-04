@@ -112,3 +112,11 @@ dicts_lists.sort(key=lambda item: item.get("Age"))
 from operator import itemgetter
 f = itemgetter('Name')
 dicts_lists.sort(key=f)
+
+
+sum1 = 0
+i = 2 # initial even integer for the sum
+while sum1 <= 250:
+sum1 += i
+i += 2 # update statement, shorthand for i = i + 2
+print(sum1)
