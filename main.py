@@ -120,3 +120,73 @@ while sum1 <= 250:
 sum1 += i
 i += 2 # update statement, shorthand for i = i + 2
 print(sum1)
+
+
+
+''' This program accepts number inputs. The inputs must be either \nwhole or decimals
+it the computes the average of the inputs and displays the result rounded to 2 decimal places.
+'''
+
+print("\nPLEASE NOTE: All the numbers you enter will add-up until you enter \"-1\"  \n \nEnter \"-1\" to break out and display result\n")
+
+# Get user input and cast to float for accuracy when working with decimals
+user_input = input("Enter a number\n> ")
+
+# initialise the counter and sum of all inputs to zero
+sum = 0
+count = 0
+
+if not user_input:
+     user_input = input("\nYour input cannot be empty \n> Enter a valid number\n> ")
+elif user_input == "-1":
+     user_input = input("\nYour input cannot be \"-1\" \n> Enter a valid number\n>  ")
+elif user_input:
+        while user_input != '-1':
+            count = count + 1
+            sum = float(user_input) + float(sum)
+            average = round((sum/count), 2)
+            user_input = input("Enter another number or enter \"-1\" to finish\n> ")
+        if user_input == '-1':
+            print(f"\nYou suplied a total of {str(count)} inputs\nYour average is {str(average)} \n")
+else:
+    print("user input not recognised please start again")
+    
+
+       
+       
+       
+       
+       
+       
+       
+       
+    
+''' 
+    
+    
+    
+    if not user_input:
+        user_input = input("\nYour input cannot be empty or cannot be \"-1\" \n> Enter a valid number\n>  ")
+else:
+    # While loop to increment count and sum-up inputs. Also contains condition to break out of the loop
+    while user_input:
+        if user_input != -1:
+            count = count + 1
+            sum = float(user_input) + float(sum)
+            user_input = input("Enter another number or enter \"-1\" to finish\n> ")
+        elif user_input == -1:
+            # Formated result displayed when condition set in while loop is met
+            print(f"\nYou suplied a total of {str(count)} inputs\nYour average is {str(sum/count)} \n")
+    
+# elif user_input == -1:
+    # user_input = input("\nYour input cannot be empty or cannot be \"-1\" \n> Enter a valid number\n>  ")
+    
+    
+    print('sum is ')
+        print(sum)
+    
+    
+      print('count is ')
+        print(count)
+    
+    '''
