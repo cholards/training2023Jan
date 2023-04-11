@@ -190,3 +190,31 @@ else:
         print(count)
     
     '''
+    
+    value_one = (input("Enter first value \n> "))
+value_two = input("Enter second value \n> ")
+operator = input("Enter operator (+, -, x or /) \n \n> ")
+
+valid_value_one = type(int(value_one)) == int or type(float(value_one)) == float
+valid_value_two = type(int(value_two)) == int or type(float(value_two)) == float
+valid_operator = "+" or "-" or "/" or "*"
+
+
+if operator == '+' and valid_value_one  and valid_value_two:
+    print(f'\n{value_one} {operator} {value_two} = {str(int(value_one) + int(value_two))}\n')
+elif operator == '-' and valid_value_one  and valid_value_two:
+    print(f'\n{value_one} {operator} {value_two} = {str(int(value_one) - int(value_two))}\n')
+elif operator == '*' and valid_value_one  and valid_value_two:
+    print(f'\n{value_one} {operator} {value_two} = {str(int(value_one) * int(value_two))}\n')
+elif operator == '/' and valid_value_one  and valid_value_two:
+    print(f'\n{value_one} ÷ {value_two} = {str(int(value_one) / int(value_two))}\n')
+else:
+    print(f"\n \n{value_one} {operator} {value_two} is not a valid Math problem \n \n")
+    
+    # log_file = open('calculator.txt', 'r')
+    # print(log_file.read())
+# try:
+#     log_file = open('calculator.txt', 'r')
+# except FileNotFoundError:
+#     print("Olule!!")
+    
