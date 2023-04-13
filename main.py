@@ -59,3 +59,33 @@ while not user_input or user_input == "-1":
 
 How can I improve the security and effectiveness of my Bash scripts?  
 Avoiding pointless loops and commands and using built-in Bash commands and features whenever possible will help Bash scripts run more quickly. Bash scripts should appropriately evaluate user input, employ appropriate file permissions, and refrain from using hazardous commands or features in order to increase their security. Additionally, encapsulating routine operations in functions can lessen code duplication and enhance maintainability. 
+
+
+Resources:
+
+
+https://wiki.bash-hackers.org/scripting/basics
+
+
+https://www.shellscript.sh/
+
+
+https://www.linuxjournal.com/content/shell-scripting-and-security
+
+
+https://www.landoflinux.com/linux_bash_scripting_structure.html
+
+
+https://phoenixnap.com/kb/wp-content/uploads/2022/11/linux-commands-cheat-sheet-pdf.pdf
+
+
+https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands
+
+
+https://oit.ua.edu/wp-content/uploads/2020/12/Linux_bash_cheat_sheet-1.pdf
+
+
+https://devhints.io/bash
+
+
+https://exercism.org/tracks/bash
