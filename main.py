@@ -57,3 +57,5 @@ while not user_input or user_input == "-1":
 
 # While debugging Bash scripts might be difficult, there are a number of ways that can be useful. One typical method is to activate debugging mode using the set -x command, which prints each command as it is executed. This can assist in locating the script's problem areas and revealing the values being utilized for each variable. Using echo statements to report out variable values at different points in the script can also be useful for identifying problems. 
 
+How can I improve the security and effectiveness of my Bash scripts?  
+Avoiding pointless loops and commands and using built-in Bash commands and features whenever possible will help Bash scripts run more quickly. Bash scripts should appropriately evaluate user input, employ appropriate file permissions, and refrain from using hazardous commands or features in order to increase their security. Additionally, encapsulating routine operations in functions can lessen code duplication and enhance maintainability. 
