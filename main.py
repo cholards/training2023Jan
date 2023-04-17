@@ -1,6 +1,12 @@
 ''' This program accepts number inputs. The inputs must be either \nwhole or decimals
 it the computes the average of the inputs and displays the result rounded to 2 decimal places.
 '''
+start = 5
+while start % 2 != 0:
+    print(start)
+    start = start + 1
+#loop will only execute once before condition is no longer true
+
 
 print("\nPLEASE NOTE: All the numbers you enter will add-up until you enter \n \"-1\" \n")
 
