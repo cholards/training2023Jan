@@ -127,3 +127,12 @@ https://oit.ua.edu/wp-content/uploads/2020/12/Linux_bash_cheat_sheet-1.pdf
 # If Bash scripts are not performing as planned, how can I debug them?
 
 # While debugging Bash scripts might be difficult, there are a number of ways that can be useful. One typical method is to activate debugging mode using the set -x command, which prints each command as it is executed. This can assist in locating the script's problem areas and revealing the values being utilized for each variable. Using echo statements to report out variable values at different points in the script can also be useful for identifying problems. 
+
+
+# Brace expansion: This technique can be used to produce a variety of values or file names. As an illustration, the commands touch file1..5 will produce the files file1.txt, file2.txt, file3.txt, file4.txt, and file5.txt.
+
+# Command substitution: This technique lets you use the result of one command as an argument for another command.
+
+# If Bash scripts are not performing as planned, how can I debug them?
+
+# While debugging Bash scripts might be difficult, there are a number of ways that can be useful. One typical method is to activate debugging mode using the set -x command, which prints each command as it is executed. This can assist in locating the script's problem areas and revealing the values being utilized for each variable. Using echo statements to report out variable values at different points in the script can also be useful for identifying problems. 
