@@ -1,17 +1,13 @@
-my_string = '''Once you are understanding strings we are working'''
 
-my_list = ('Once','you','are','understanding','strings','we', 'are', 'working')
-
-nulist = ' '
-
-print(f"The sentence has {str(len(my_string))} charcters")
-
-
-
-# nuword = ""
-
-
-
-print(my_list.join(nulist))
-
+try: # Exception handling for values that the user enters
+        value_one = input("Enter first value \n> ")
+        value_two = input("Enter second value \n> ")
+        one = float(value_one)
+        two = float(value_two)
         
+        # Prompt for user to choose operator
+        operator = input("Enter operator (+, -, x or /) \n \n> ")
+        print(f'{value_one, operator, value_two}')
+        print (one / two)
+except Exception:
+        print("Please insert a valid whole or decimal number and begin again")
