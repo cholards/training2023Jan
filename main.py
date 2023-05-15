@@ -1,37 +1,42 @@
-def my_function(x):
-    y = x * 2
-    return y
 
-print(my_function(10));
+def square(length):
+    return length * length
 
+def rectangle(width , height):
+    return width * height
 
-def adding(a,b):
-    total = a + b
-    return (description + str(total))
-x = 2
-y = 3
-description = "Total: "
-sum = adding(x, y)
-print(sum)
+def circle(radius):
+    return 3.14 * radius ** 2
 
+def options():
+    print
+    print("Options:")
+    print("s = calculate the area of a square.")
+    print("c = calculate the area of a circle.")
+    print("r = calculate the area of a rectangle.")
+    print("q = quit")
+    print
 
-# profile_dict = {
-#     'name': 'Chris',
-#     'surname': 'Smith', 
-#     'age': 28, 
-#     'cell': '083 233 3242'
-#     }
-# print (profile_dict['surname']) # prints out 'Smith'
-# print (profile_dict.get('cell')) # prints out '083 233 3242'
-
-# profile_dict['surname'] = 'Bob'
-# profile_dict['location'] = 'Srilanka'
-
-# # print(profile_dict)
-
-# print('location' in profile_dict)
-
-# # keys = profile_dict.keys()
-# # values = profile_dict.values()
-# # print(keys)
-# # print(values)
+print("This program will calculate the area of a square, circle or rectangle.")
+choice = "x"
+options()
+while choice != "q":
+    choice = input("Please enter your choice: ")
+    if choice == "s":
+        length = float(input("Length of square: "))
+        print("The area of this square is", square(length))
+        options()
+    elif choice == "c":
+        radius = float(input("Radius of the circle: "))
+        print("The area of the circle is", circle(radius))
+        options()
+    elif choice == "r":
+        width = float(input("Width of the rectangle: "))
+        height = float(input("Height of the rectangle: "))
+        print("The area of the rectangle is", rectangle(width, height))
+        options()
+    elif choice == "q":
+        print("",)
+    else:
+        print("Unrecognized option.")
+        options()
