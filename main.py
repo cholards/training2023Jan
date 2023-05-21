@@ -1,42 +1,32 @@
 
-def square(length):
-    return length * length
 
-def rectangle(width , height):
-    return width * height
+# text = input("Enter the word to encrypt")
+# shift = 0
 
-def circle(radius):
-    return 3.14 * radius ** 2
+# try:
+#     shift = int(input("Enter the shift code"))
+# except Exception as e:
+#     while e:
+#         print("Only an Integer is accepted")
+#         shift = int(input("Enter the shift code"))
+    
+        
 
-def options():
-    print
-    print("Options:")
-    print("s = calculate the area of a square.")
-    print("c = calculate the area of a circle.")
-    print("r = calculate the area of a rectangle.")
-    print("q = quit")
-    print
+def encode(input):
+    index = ord(input)
+    shift = 15
+    def shifted(index, shift):
+        if index > 26:
+            index = (index % 26)
+    
+    new_index = index + shift
+            
+    return chr(new_index)
 
-print("This program will calculate the area of a square, circle or rectangle.")
-choice = "x"
-options()
-while choice != "q":
-    choice = input("Please enter your choice: ")
-    if choice == "s":
-        length = float(input("Length of square: "))
-        print("The area of this square is", square(length))
-        options()
-    elif choice == "c":
-        radius = float(input("Radius of the circle: "))
-        print("The area of the circle is", circle(radius))
-        options()
-    elif choice == "r":
-        width = float(input("Width of the rectangle: "))
-        height = float(input("Height of the rectangle: "))
-        print("The area of the rectangle is", rectangle(width, height))
-        options()
-    elif choice == "q":
-        print("",)
-    else:
-        print("Unrecognized option.")
-        options()
+
+text = 'kolade is great.'
+
+to_turple = text.split(" ")
+
+for alph in text:
+    print(encode(alph))
