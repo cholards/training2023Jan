@@ -49,9 +49,16 @@ upper = {ascii:chr(ascii) for ascii in range(65,91)}
 lower = {ascii:chr(ascii) for ascii in range(97,123)}
 digit = {ascii:chr(ascii) for ascii in range(48,58)}
 
+caps =  list(upper.values())
+lows =  list(lower.values())
+
+print(caps)
+print(lows)
+
+
 
 shift = 1
-text = "This is a complete word!"
+text = "A"
 # print(chr(ord(text)))
 # print(ord(text))
 
@@ -61,28 +68,14 @@ def encode(x, y):
 
 
     for chara in x:
-            if chara.isalpha():
-                if ord(chara) in upper or ord(chara) in lower or ord(chara) in digit:
-                    locate = ord(chara)
-                    encrypted += chr(locate)
+                if ord(chara) in upper or ord(chara) in lower:
+                    if chara.isalpha():
+                        in_caps = upper[65]
+                        locate = ord(chara) + y
+                        encrypted += chr(locate)
+                else:
+                    encrypted += char
 
-
-    #     if locate in upper:
-    #         where = "upper"
-    #         index = upper[locate]
-    #     elif locate in lower:
-    #         where = "lower"
-    #         index = lower[locate]
-    #     elif locate in digit:
-    #         where = "digit"
-    #         locate = digit[locate]
-
-    
-
-    return encrypted
-
-
-
-
+    return in_caps
 
 print(encode(text,shift))
