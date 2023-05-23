@@ -50,5 +50,39 @@ lower = {ascii:chr(ascii) for ascii in range(97,123)}
 digit = {ascii:chr(ascii) for ascii in range(48,58)}
 
 
+shift = 1
+text = "This is a complete word!"
+# print(chr(ord(text)))
+# print(ord(text))
 
-print(upper)
+def encode(x, y):
+    index = 0
+    encrypted = ""
+
+
+    for chara in x:
+            if chara.isalpha():
+                if ord(chara) in upper or ord(chara) in lower or ord(chara) in digit:
+                    locate = ord(chara)
+                    encrypted += chr(locate)
+
+
+    #     if locate in upper:
+    #         where = "upper"
+    #         index = upper[locate]
+    #     elif locate in lower:
+    #         where = "lower"
+    #         index = lower[locate]
+    #     elif locate in digit:
+    #         where = "digit"
+    #         locate = digit[locate]
+
+    
+
+    return encrypted
+
+
+
+
+
+print(encode(text,shift))
