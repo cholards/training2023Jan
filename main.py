@@ -50,5 +50,5 @@ lower = {ascii:chr(ascii) for ascii in range(97,123)}
 digit = {ascii:chr(ascii) for ascii in range(48,58)}
 
 
-print (digit)
 
+print(upper)
