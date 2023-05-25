@@ -1,81 +1,34 @@
+# This Cypher encrypts to every upper case and lower case alphabet to the 15th position.
+# It leaves every digit, symbol, special character and space the same
 
-# text = input("Enter the word to encrypt")
-# shift = 0
+# Collect user input text to be encrypted
+shift = 0
+text = "This  is my Cypher encryption algorithm & I l0ve it 2 mucH '100%'"
 
-# try:
-#     shift = int(input("Enter the shift code"))
-# except Exception as e:
-#     while e:
-#         print("Only an Integer is accepted")
-#         shift = int(input("Enter the shift code"))
-
-
-# def encode(input):
-#     index = ord(input)
-#  shift = 1
-
-
-#     if not chr(index).isalpha():
-#         shift = 0
-#         new_index = index + shift
-#     else:
-#         if index >= 90 and index < 96:
-#             new_index = index
-#             new_index = index + shift
-#             print(f"MY NEW INDEX IS {new_index}")
-#         elif index >= 122 and index <= 127:
-#             new_index = index - 25
-#         # else:
-#             # print(f"{input} is an Unknown character")
-
-
-#     return (f"{input} index is {index}, ------- but transposed to {chr(new_index)} with index {new_index} ")
-#     # return chr(new_index)
-
-
-# text = 'This is a 3 boo-bob sentence!'
-# text = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-# text = "Z"
-# lis = list(text)
-# encrypted =""
-
-# for l in lis:
-#     encrypted += encode(l)
-
-# print(encrypted)
-# print(encode(text))
-
-upper = {ascii:chr(ascii) for ascii in range(65,91)}
-lower = {ascii:chr(ascii) for ascii in range(97,123)}
-digit = {ascii:chr(ascii) for ascii in range(48,58)}
-
-caps =  list(upper.values())
-lows =  list(lower.values())
-
-print(caps)
-print(lows)
-
-
-
-shift = 1
-text = "A"
-# print(chr(ord(text)))
-# print(ord(text))
-
+# Define the function that will encrypt the text input
 def encode(x, y):
-    index = 0
     encrypted = ""
 
+    # Define the uppercase and lower case space range of alphabets from the universal ASCII  character set in dictionaries
+    upper = {ascii:chr(ascii) for ascii in range(65,91)}
+    lower = {ascii:chr(ascii) for ascii in range(97,123)}
 
-    for chara in x:
-                if ord(chara) in upper or ord(chara) in lower:
-                    if chara.isalpha():
-                        in_caps = upper[65]
-                        locate = ord(chara) + y
-                        encrypted += chr(locate)
-                else:
-                    encrypted += char
+    # Extract all alphabets into lists to ensure each of the 26 alphabets is represented in upper case and lower case
+    caps =  list(upper.values())
+    lows =  list(lower.values())
 
-    return in_caps
 
+    for i in x:
+        if chr(ord(i)) in caps:
+            shifted =  (caps.index(i) + y) % 26
+            encrypted += caps[shifted]
+        elif chr(ord(i)) in lows:
+            shifted =  (lows.index(i) + y) % 26
+            encrypted += lows[shifted]
+        else:
+            encrypted += i
+
+    return encrypted
+
+# Function call with text input and shift value
 print(encode(text,shift))
