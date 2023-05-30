@@ -41,52 +41,88 @@
 
 
 
+
+
 ###### TASK 1 #####
 
+# Function adds the "un" prefix to any input text
 def add_prefix_un(word):
     return 'un' + word
 
 # print(add_prefix_un("happy"))
 
 
+
+
 ###### TASK 2 #####
 
+# function takes in a list and prefixes all words with the first item in list
 def make_word_groups(vocab_words):
+    
+    # Select the first item on the list and assign to a variable "prefix"
     prefix = vocab_words[0]
+    
+    # Exclude the first item and assign all other items to a variable
     rest_of_words = vocab_words[1:]
+    
+    # Create new list and assign the prefix word as first item
     new_words = [prefix]
     
+    # Loop over the list of the other words and append to
+    # the new list while concatenating with prefix-item
     for word in rest_of_words:
         new_words.append(prefix+word)
     
-    return " :: ".join(new_words)
+    # Final output to present the new wordsß joined with the "::" character
+    nu_words = " :: ".join(new_words)
+
+    return nu_words
 
 
 # print(make_word_groups(['en', 'close', 'joy', 'lighten']))
 
 
+
+
 ###### TASK 3 #####
 
+# Takes in a word as input and returns the root word without
+# the "ness" suffix where necessary
 def remove_suffix_ness(word):
+    # Define a variable for the new word to  be created and assign empty string
     nu_word = ""
+    
+    # Create condition to use in determining if the word ends with
+    # a "y" or not using the fifth character from the end
     if word[-5] == "i":
+        # Remove the "ness" and add a "y"
         nu_word = word[:-5] + "y"
     else:
+        # Remove the "ness"
         nu_word = word[:-4]
-    
+
     return nu_word
- 
+
 # print(remove_suffix_ness("sadness"))
 # print(remove_suffix_ness("heaviness"))
 
 
+
+
 ###### TASK 4 #####
 
+# Function takes a sentence and an index and returns extracted adjective as a verb
 def adjective_to_verb(word, pos):
+    
+    # Split the words in the sentence at the spaces
     x = word.split(" ")
+    # Use the index position argument to extract the word to to return and concatenate with "en"
     nu_word = x[pos] + 'en'
+    
+    # Strip any fullstops from the word to be returned
+    nu_word = nu_word.replace('.','')
     
     return nu_word
 
 
-print(adjective_to_verb('I need to make that bright.', -1 ))
+# print(adjective_to_verb('I need to make that bright.', -1 ))
